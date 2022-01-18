@@ -5,11 +5,15 @@ ruby '3.0.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
-# Use sqlite3 as the database for Active Record in development environment
-gem 'sqlite3', '~> 1.4', group: :development
+# Use sqlite3 as the database for Active Record in development and test environments
+group :development, :test do
+  gem 'sqlite3', '~> 1.4'
+end
 # Use postgresql as the database for Active Record in production environment
-gem 'pg', '0.18.1', group: :production
-gem 'rails_12factor', group: :production
+group :production do 
+  gem 'pg' # PostgreSQL
+  gem 'rails_12factor'
+end
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
