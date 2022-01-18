@@ -1,9 +1,17 @@
+require 'csv'
+
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
 
-  # GET /products or /products.json
+  # GET /products or /products.json or /products.csv
   def index
     @products = Product.all
+
+    respond_to do |format|
+      format.html
+      format.json
+      format.csv { send_data @products.to_csv, filename: "products-#{Date.today}.csv" }
+    end
   end
 
   # GET /products/1 or /products/1.json
