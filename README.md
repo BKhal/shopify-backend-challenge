@@ -1,24 +1,23 @@
-# README
+# Shopify Intern Backend Challenge Summer 2022
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple web application created using Ruby on Rails for tracking inventory. You can create, edit, list, or delete products and their quantities.
 
-Things you may want to cover:
+The application also allows you to download the product data as a CSV file.
 
-* Ruby version
+## Running the Application
 
-* System dependencies
+The application can be accessed at the following url: [https://bkhal.github.io/shopify-backend-challenge/](https://bkhal.github.io/shopify-backend-challenge/)
 
-* Configuration
+Alternatively, in order to run the application locally, make sure to have the following installed on your machine:
 
-* Database creation
+* Ruby (ver. 3.0.1)
+* Rails (ver. 6.1.4.4)
+* SQLite (ver. 3.31.1)
 
-* Database initialization
+Next, follow these steps:
 
-* How to run the test suite
+1. Clone project files from GitHub.
+2. Navigate to folder in command terminal and run `rails server`.
+3. Navigate to [localhost:3000](http://localhost:3000/) in your browser.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You should now be able to see the inventory landing page, from where you can create new products, manage the ones that have already been created, and export the data to a CSV file.
