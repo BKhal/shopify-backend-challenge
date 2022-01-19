@@ -6,7 +6,7 @@ The application also allows you to download the product data as a CSV file.
 
 ## Running the Application
 
-The application can be accessed at the following url: [https://bkhal.github.io/shopify-backend-challenge/](https://bkhal.github.io/shopify-backend-challenge/)
+The application can be accessed at the following url: [https://bk-shopify-backend-challenge.herokuapp.com/](https://bk-shopify-backend-challenge.herokuapp.com/)
 
 Alternatively, in order to run the application locally, make sure to have the following installed on your machine:
 
