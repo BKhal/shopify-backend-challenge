@@ -62,6 +62,11 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "should not attempt to create product with quantity greater than integer max value" do
+    post products_url, params: { product: { name: "NewProduct", quantity: 2**32 } }
+    assert_response 422 # 422 is the Unprocessable Entity response
+  end
+
   test "should show product" do
     get product_url(@product)
     assert_response :success
